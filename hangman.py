@@ -1,14 +1,12 @@
-import os
 import sys
 import random
-from words import gry,zwierzeta, imiona_menskie, imiona_zenskie, rodzina, sport, instrumenty, abc_list, z, r, im, iz, g, i, s
+from words import zwierzeta, imiona_menskie, imiona_zenskie, rodzina, sport, instrumenty, abc_list, z, r, im, iz, g, i, s
 from hangman_display import display_hangmanl1, display_hangmanl2, display_hangmanl3
 
 tries = 0
 word = "cos"
 used_letters = []
 user_word = []
-select = ""
 again = ""
 my_while = 0
 dificulty = 0
@@ -35,7 +33,6 @@ def hi():
 
 
 ############################################################################################################################################################################
-
 haslo = ""
 category_1 = [z, r, iz, im, s, i, g,]
 selec1 = "1"
@@ -52,9 +49,9 @@ input("Press Enter to continue...")
 
 while True:
     print("Select Dificulty: ")
-    print("1. Easy")
-    print("2. Normal")
-    print("3. Hard")
+    print("1. Easy / 9 tries")
+    print("2. Normal / 6 tries")
+    print("3. Hard / 3 tries")
     dif = (input("Enter 1, 2 or 3: "))
     
     if dif1 == dif:
@@ -101,9 +98,6 @@ while True:
             elif category == "instrumenty":
                 haslo = "".join(random.choice(instrumenty))
                 word=haslo
-            elif category == "gry":
-                haslo = "".join(random.choice(gry))
-                word=haslo
         else:
             print("Choose the correct options: ")
             continue
@@ -120,6 +114,7 @@ while True:
     while my_while != 1:
         print("Enter the letter: ")
         letter = (input())
+        letter = letter.upper()
         print()
         if not letter in used_letters:  
             if len(letter) == 1:    
@@ -174,7 +169,4 @@ while True:
         else:
             print("You have already entered this letter")
             print("Enter the letter again")
-
-
-
-#Jakub pabiś
+#Pabis 
