@@ -25,7 +25,7 @@ def find_indexes(word, letter):
 def show_state_of_game():
     print(" ".join(user_word))
     print("Other attempts:", tries)
-    print("Letters used", ", ".join(used_letters))
+    print("Used letters", ", ".join(used_letters))
     print()
 def hi():
     print("welcome to hangman game")
